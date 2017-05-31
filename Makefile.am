@@ -380,14 +380,14 @@ noinst_LTLIBRARIES += libfake_stacktrace_scope.la
 libfake_stacktrace_scope_la_SOURCES = src/fake_stacktrace_scope.cc
 
 ### Unittests
-TESTS += stacktrace_unittest
-STACKTRACE_UNITTEST_INCLUDES = src/config_for_unittests.h \
+#TESTS += stacktrace_unittest
+#STACKTRACE_UNITTEST_INCLUDES = src/config_for_unittests.h \
                                src/base/commandlineflags.h \
                                $(STACKTRACE_INCLUDES) \
                                $(LOGGING_INCLUDES)
-stacktrace_unittest_SOURCES = src/tests/stacktrace_unittest.cc \
+#stacktrace_unittest_SOURCES = src/tests/stacktrace_unittest.cc \
                               $(STACKTRACE_UNITTEST_INCLUDES)
-stacktrace_unittest_LDADD = libstacktrace.la liblogging.la libfake_stacktrace_scope.la
+#stacktrace_unittest_LDADD = libstacktrace.la liblogging.la libfake_stacktrace_scope.la
 
 ### Documentation
 dist_doc_DATA +=
